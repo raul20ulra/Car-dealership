@@ -19,6 +19,15 @@ export class CarsService {
             model: 'Cherokke'
         },
 
-    ]
+    ];
 
+
+    findAll(){
+        return this.cars
+    }
+
+    findOneById(id:number){
+        const car= this.cars.find(car=>car.id===id);
+        return car
+    }
 }
